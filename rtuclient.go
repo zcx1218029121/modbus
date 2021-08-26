@@ -80,10 +80,10 @@ func (mb *rtuPackager) Verify(aduRequest []byte, aduResponse []byte) (err error)
 		return
 	}
 	// Slave address must match
-	if aduResponse[0] != aduRequest[0] {
-		err = fmt.Errorf("modbus: response slave id '%v' does not match request '%v'", aduResponse[0], aduRequest[0])
-		return
-	}
+	//if aduResponse[0] != aduRequest[0] {
+	//	err = fmt.Errorf("modbus: response slave id '%v' does not match request '%v'", aduResponse[0], aduRequest[0])
+	//	return
+	//}
 	return
 }
 
