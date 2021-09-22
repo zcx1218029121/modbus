@@ -147,6 +147,7 @@ type tcpTransporter struct {
 
 // Send sends data to server and ensures response length is greater than header length.
 func (mb *tcpTransporter) Send(aduRequest []byte) (aduResponse []byte, err error) {
+	log.Print(fmt.Sprintf("send Frame >>>>  %s\n", hex.EncodeToString(aduRequest)))
 	mb.mu.Lock()
 	defer mb.mu.Unlock()
 
